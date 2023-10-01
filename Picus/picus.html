@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../Landing_Page_designs/ic.png">
+    <link rel="stylesheet" href="creating.css">
+    <title>Design Mall: Picus</title>
+</head>
+
+<body>
+    <h1 id="name"><a href="../designmall.html" target="_self" id="main">&#9750;&nbsp;Home</a></h1>
+    <span id="leftArrow" onclick="goLeft()">&larr;</span>
+    <div class="slide-container">
+        <div class="inner-content">
+            <img src="simps.png" class="slideImage" onclick="grab(this)">
+            <img src="dollars.png" class="slideImage" onclick="grab(this)">
+            <img src="ichigo.png" class="slideImage" onclick="grab(this)">
+            <img src="ichigoOrange.png" class="slideImage" onclick="grab(this)">
+            <img src="narut.png" class="slideImage" onclick="grab(this)">
+            <img src="ken.png" class="slideImage" onclick="grab(this)">
+            <img src="penguin.png" class="slideImage" onclick="grab(this)">
+            <img src="2pac.png" class="slideImage" onclick="grab(this)">
+            <img src="rick.png" class="slideImage" onclick="grab(this)">
+            <img src="sponge.png" class="slideImage" onclick="grab(this)">
+            <img src="heart.png" class="slideImage" onclick="grab(this)">
+            <img src="Dattebayo.png" class="slideImage" onclick="grab(this)">
+        </div>
+    </div>
+    <span id="rightArrow" onclick="goRight()">&rarr;</span>
+    <div class="Ranger">
+        <p
+            style="display: inline-block; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            Line Width:</p>
+        <input type="range" id="number" min="1" max="80" oninput="changer()" value="1">
+        <p id="userReadCheck"
+            style="display: inline-block; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-top: 0%;">
+            1</p>&nbsp;&nbsp;
+        <button id="round">Round</button>&nbsp;&nbsp;&nbsp;&nbsp;<button
+            id="square">Square</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="color" id="colors" oninput="changeColor(this)" value="#000000">
+        <input type="color" id="colorStrok" oninput="changeStrokeColor(this)">
+    </div>
+    <div id="pastel">
+        <canvas id="myCanvas">
+        </canvas>
+    </div>
+
+    <div style="margin-top: 10px; float: left;">
+        <dialog id="Text" style="display: none; border: 0.5px solid; width: 350px;">
+            <span onclick="hideDia()">&times;</span>
+            <textarea placeholder="Type Here..." id="textHolder" onclick="ManipBit(this)"></textarea>
+            <h3 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Choose Fonts</h3>
+            <div id="fontFamilies" style="display: none;">
+                <button style="font-family: Georgia;" onclick="georgia()"><b class="font">Georgia</b></button>
+                <button style="font-family: 'Courier New', Courier, monospace;" onclick="courrier()"><b
+                        class="font">Courrier (Monospace)</b></button>
+                <button style="font-family: Arial;" onclick="arial()"><b class="font">Arial (Sans-Serif)</b></button>
+                <button style="font-family: cursive;" onclick="cursive()"><b class="font">Cursive</b></button>
+                <button style="font-family: Helvetica;" onclick="helvitica()"><b class="font">Helvitica
+                        (Sans-Serif)</b></button>
+                <button style="font-family: 'Times New Roman';" onclick="times()"><b class="font">Times New
+                        Roman(Serif)</b></button>
+            </div>
+        </dialog>
+        <button class="mod" onclick="Circlate()">&#x25EF;</button><br>
+        <button class="mod" onclick="ellipse()">Ellipse</button><br>
+        <button class="mod" onclick="SquareAround()">&#x25FC;</button><br>
+        <button class="mod" onclick="adjacent()">Adjacent &#x2571;</button><br>
+        <button class="mod" onclick="vibrant()">Vibrant &#x2571;</button><br>
+        <button class="mod" onclick="line()">Connected &#x2571;</button><br>
+        <button class="mod" onclick="symmetricLine()">Symmetric &#x2571;</button><br>
+        <button class="mod" onclick="halfBube()">Sticky</button><br>
+        <button class="mod" onclick="maze()">Maze</button>
+    </div>
+    <div style="margin-top: 10px; float: right;">
+        <button class="mod" id="drawer" onclick="draw()">Pixeled &#x270E;</button>
+        <br>
+        <button class="mod">Add Backgrounds</button><br>
+        <button class="mod">Add Icons</button><br>
+        <button class="mod">Add Images</button><br>
+        <button class="mod" onclick="showText()">Add Text</button><br>
+        <button class="mod" onclick="GreyScale()">GreyScale</button><br>
+        <button class="modil" onclick="back()">Undo</button><br>
+        <button class="modi">Try it on T-shirt</button><br>
+        <button class="modil" onclick="clearit()">Clear</button><br>
+        <button class="modi" onclick="save()">GO!!!</button>
+    </div>
+    <div>
+        <p
+            style="display: inline-block; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            Resize:</p>
+        <input type="range" min="5" max="350" id="widthBubble" oninput="changit(this)" value="0">
+        <button id="strokeOnly" class="bottomButtonStroke">ONLY Stroke</button>
+        <button class="bottomButton" onclick="removeStroke(this)">Remove Stroke</button>
+        <button class="bottomButton" onclick="blend(this)">normal</button>
+        <button class="bottomButton" onclick="blend(this)">xor</button>
+        <button class="bottomButton" onclick="blend(this)">multiply</button>
+        <button class="bottomButton" onclick="blend(this)">darken</button>
+        <button class="bottomButton" onclick="blend(this)">lighten</button>
+        <button class="bottomButton" onclick="blend(this)">color</button>
+        <button class="bottomButton" onclick="blend(this)">overlay</button>
+        <button class="bottomButton" onclick="blend(this)">screen</button>
+        <button class="bottomButton" onclick="blend(this)">difference</button>
+        <button class="bottomButton" onclick="blend(this)">saturation</button>
+        <button class="bottomButton" onclick="dragElem()">Grab</button>
+        <button class="bottomButton" id="vertical">Vertical</button>
+    </div>
+    <script>
+        const canvas = document.querySelector('canvas');
+        const context = canvas.getContext('2d');
+        canvas.height = 450;
+        canvas.width = 820;
+        var lostFocus = false
+        var strokColor
+        var colorStyle
+        var dialogText
+        var bubbleRadius = 30;
+        var authorized = false
+        var squareSize = 50
+        var halfBubSize = 20
+        var rangeValue
+        var toVertical = false
+        var oddOrEven = 1
+        var Rect = false
+        var strokeIsRemoved = false
+        var effectsColor = 'rgb(221, 169, 111)'
+        var fontText = '30px Georgia'
+        let adjacentStart = false
+        var strokBut = document.getElementById('strokeOnly')
+        var slideIndex = 0
+        var slideIndex = 1
+        function symmetricLine() {
+            /*using the symmetric line meaning the line, in this case is horizontal, it will be a straight line*/
+            canvas.onmousedown = startBoth
+            /*when the mouse is clicked on the canvas, startboth() function will be triggered*/
+            canvas.onmousemove = keepBoth
+            /*when the mouse is moving, keepBoth() will be triggered*/
+            canvas.onmouseup = stopBoth
+            /*when the mouse is not clicked anymore, stopBoth() will be triggered*/
+            let isStartBoth = false
+            /*isStartBoth boolean value will be false, will turn true when the mouse is clicked*/
+            let y
+            let x
+            function startBoth(e) {
+                /*e.offsetY & e.offsetX taking only the (x,y) relative to the size of the canvas*/
+                y = e.offsetY
+                x = e.offsetX
+                context.beginPath()
+                context.moveTo(x, y)
+                /*start the line using moveTo()*/
+                isStartBoth = true
+                /*here, when the click event is triggered, the isStartBoth boolean will turn true, this boolean will be used below to control the drawing, meaning the drawing will only occur when the user is moving the mouse while clicking, not only while moving the mouse, if the user only moves the mouse without keep pressing, the boolean will turn false, and no drawing would occur*/
+            }
+            function keepBoth(e) {
+                /*initiate drawing functions only if the isStartBoth is true*/
+                if (isStartBoth === true) {
+                    x = e.offsetX
+                    /*to keep the line straight, y will be as same as the previous y on the first click, x would change on moving the mouse*/
+                    context.lineTo(x, y)
+                    context.lineWidth = rangeValue
+                    /*the user control the width of line drawn using range input taken from the input tag on html code with type range*/
+                    context.strokeStyle = strokColor
+                    context.stroke()
+                }
+            }
+            function stopBoth() {
+                /*when the user stops the pressing on the mouse, the isStartBoth will stop, when the user move the mouse, KeepBoth function will be triggered but no line will be drawn because isStartBoth is turned false, and the drawing only occurs when it is true*/
+                isStartBoth = false
+            }
+        }
+        function vibrant() {
+            let clickableToMove = false
+            canvas.onmousedown = initiate
+            canvas.onmousemove = moveForward
+            canvas.onmouseup = leaveIt
+            function initiate(e) {
+                clickableToMove = true
+                let x = e.offsetX
+                let y = e.offsetY
+                context.beginPath()
+                context.moveTo(x, y)
+                context.beginPath()
+                context.moveTo(x, y + 20)
+                context.stroke()
+            }
+            function moveForward(e) {
+                if (clickableToMove === true) {
+                    let x = e.offsetX
+                    let y = e.offsetY
+                    context.lineTo(x, y)
+                    context.stroke()
+                    context.lineTo(x, y + 20)
+                    context.stroke()
+                }
+            }
+            function leaveIt() {
+                clickableToMove = false
+            }
+        }
+        function goRight() {
+            let left = document.getElementById('leftArrow')
+            left.style.display = 'inline-block'
+            innerContent = document.getElementsByClassName('slideImage')
+
+        }
+        function removeStroke(cnt) {
+            strokeIsRemoved = true
+            context.lineWidth = '0px'
+            cnt.textContent = "Add Stroke"
+            cnt.addEventListener('click', function () {
+                strokeIsRemoved = false
+                cnt.textContent = "Remove Stroke"
+            })
+        }
+        function adjacent() {
+            canvas.onmousedown = startSketch
+            canvas.onmousemove = keepSketch
+            canvas.onmouseup = leaveSketch
+            let starting = false
+            function startSketch(e) {
+                /*the lineTo turn to be moveTo after each iteration, what I would suggest is keeping moveTo as the source of the drawn line*/
+                starting = true
+            }
+            function keepSketch(e) {
+                if (starting) {
+                    context.beginPath()
+                    context.moveTo(e.offsetX, e.offsetY)
+                    context.lineTo(e.offsetX, e.offsetY)
+                    context.stroke()
+                }
+            }
+            function leaveSketch() {
+                starting = false
+            }
+        }
+        function manipulate() {
+            document.getElementById('colors').setAttribute('value', '#dda96f')
+        }
+        function blend(mode) {
+            /*blend is about the manipulation of pixels, as the blending mode in photoshop, the globalCompositionOperation is what controls that here, each blending mode has an effect on the design on the canvas*/
+            let theMode = mode.textContent
+            context.globalCompositeOperation = `${theMode}`
+        }
+        function halfBube() {
+            /*you can find manipulate on line 246. This function of manipulate basically takes the html tag which is input with type color and changes its value with the color of the circle and line about to be created, the value taken by the setAttribute function is hexadecimal code correspending to the color of the drawing about to occur*/
+            manipulate()
+            canvas.style.cursor = 'context-menu';
+            isStarting = false
+            /*the halfBube function is about the creation of a circle and line, sticked to each other, on the canvas is written as sticky button. The idea here is that whenever the user moves the mouse, circle will be created and line also. How this happened? I used odd and even numbers, there is a variable called oddOrEven, what I did is I basically traced the user mouse moving event, each move will have its own shape, meaning that when the user moves, for example, from (3,4) to (4,5), the oddOrEven variable will be incremented by 1, if the its value is an odd number create a line, else create a circle. Same cycle will happen from each coordinate during the moving event, the calculations will take place during each move*/
+            canvas.onmousedown = halfbubStart
+            canvas.onmousemove = halfbubKeep
+            canvas.onmouseup = halfbubStop
+            function halfbubStart() {
+                isStarting = true
+                /*start drawing only if isStarting is true, because we don't want the user to have his/her mouse drawing while moving it event they didn't intended to*/
+            }
+            function halfbubKeep(e) {
+                if (isStarting === true) {
+                    let x = e.offsetX
+                    let y = e.offsetY
+                    if (oddOrEven % 2 != 0) {
+                        context.beginPath()
+                        context.fillStyle = effectsColor
+                        context.arc(x, y, halfBubSize, 0, Math.PI * 2)
+                        context.fill()
+                        /*the strokeIsRemoved variable is related to the remove stroke button*/
+                        if (strokeIsRemoved == false) {
+                            context.strokeStyle = strokColor
+                            context.stroke()
+                        }
+                    }
+                    else {
+                        context.fillRect(x, y, 50, 4)
+                        if (strokeIsRemoved == false) {
+                            context.strokeStyle = strokColor
+                            context.strokeRect(x, y, 50, 4)
+                        }
+                    }
+                    oddOrEven++
+                }
+            }
+            function halfbubStop() {
+                isStarting = false
+            }
+        }
+        function changit(x) {
+            bubbleRadius = x.value
+            squareSize = x.value
+            halfBubSize = x.value
+        }
+        function SquareAround() {
+            manipulate()
+            /*SquareAround is the same as halfBube, the differece is the square arround is only for squares, no lines are sticked*/
+            /*in the SquareAround, there are two, either draw a stroke square, or fill one, meaning one with only stroke, no area filled, or one with stroke and area filled*/
+            canvas.style.cursor = 'context-menu';
+            strokBut.style.display = 'inline-block'
+            strokBut.addEventListener('click', function (e) {
+                isStarting = false
+                canvas.onmousedown = squareStart
+                canvas.onmousemove = squareGoes
+                canvas.onmouseup = squareStop
+                function squareStart(e) {
+                    isStarting = true
+                    let x = e.offsetX
+                    let y = e.offsetY
+                    context.strokeStyle = strokColor
+                    context.lineWidth = rangeValue
+                    context.strokeRect(x, y, squareSize, squareSize)
+                }
+                function squareGoes(e) {
+                    if (isStarting === true) {
+                        let x = e.offsetX
+                        let y = e.offsetY
+                        context.strokeStyle = strokColor
+                        context.lineWidth = rangeValue
+                        context.strokeRect(x, y, squareSize, squareSize)
+                    }
+                }
+                function squareStop(e) {
+                    isStarting = false
+                }
+            })
+            isStarting = false
+            canvas.onmousedown = squareStart
+            canvas.onmousemove = squareGoes
+            canvas.onmouseup = squareStop
+            function squareStart(e) {
+                isStarting = true
+                let x = e.offsetX
+                let y = e.offsetY
+                context.fillStyle = effectsColor
+                context.fillRect(x, y, squareSize, squareSize)
+                context.lineWidth = rangeValue
+                if (strokeIsRemoved == false) {
+                    context.strokeStyle = strokColor
+                    context.strokeRect(x, y, squareSize, squareSize)
+                }
+            }
+            function squareGoes(e) {
+                if (isStarting === true) {
+                    let x = e.offsetX
+                    let y = e.offsetY
+                    context.fillStyle = effectsColor
+                    context.fillRect(x, y, squareSize, squareSize)
+                    context.lineWidth = rangeValue
+                    if (strokeIsRemoved == false) {
+                        context.strokeStyle = strokColor
+                        context.strokeRect(x, y, squareSize, squareSize)
+                    }
+                }
+            }
+            function squareStop(e) {
+                isStarting = false
+            }
+        }
+        function Circlate() {
+            manipulate()
+            /*this one is like square but for circles*/
+            canvas.style.cursor = 'context-menu';
+            strokBut.style.display = 'inline-block'
+            strokBut.addEventListener('click', function () {
+                let isStarting = false
+                canvas.onmousedown = bubbleStart
+                canvas.onmousemove = bubbleGoes
+                canvas.onmouseup = bubbleStop
+                function bubbleStart(e) {
+                    isStarting = true
+                    let x = e.offsetX
+                    let y = e.offsetY
+                    context.beginPath()
+                    context.arc(x, y, bubbleRadius, 0, Math.PI * 2)
+                    context.lineWidth = rangeValue
+                    if (strokeIsRemoved == false) {
+                        context.strokeStyle = strokColor
+                        context.stroke()
+                    }
+                }
+                function bubbleGoes(e) {
+                    let x = e.offsetX
+                    let y = e.offsetY
+                    if (isStarting === true) {
+                        context.beginPath()
+                        context.arc(x, y, bubbleRadius, 0, Math.PI * 2)
+                        context.lineWidth = rangeValue
+                        if (strokeIsRemoved == false) {
+                            context.strokeStyle = strokColor
+                            context.stroke()
+                        }
+                    }
+                }
+                function bubbleStop() {
+                    isStarting = false
+                }
+            })
+            let isStarting = false
+            canvas.onmousedown = bubbleStart
+            canvas.onmousemove = bubbleGoes
+            canvas.onmouseup = bubbleStop
+            function bubbleStart(e) {
+                isStarting = true
+                let x = e.offsetX
+                let y = e.offsetY
+                context.beginPath()
+                context.arc(x, y, bubbleRadius, 0, Math.PI * 2)
+                context.fillStyle = effectsColor
+                context.fill()
+                context.lineWidth = rangeValue
+                if (strokeIsRemoved == false) {
+                    context.strokeStyle = strokColor
+                    context.stroke()
+                }
+            }
+            function bubbleGoes(e) {
+                if (isStarting === true) {
+                    let x = e.offsetX
+                    let y = e.offsetY
+                    context.beginPath()
+                    context.arc(x, y, bubbleRadius, 0, Math.PI * 2)
+                    context.fillStyle = effectsColor
+                    context.lineWidth = rangeValue
+                    context.fill()
+                    if (strokeIsRemoved == false) {
+                        context.strokeStyle = strokColor
+                        context.stroke()
+                    }
+                }
+            }
+            function bubbleStop() {
+                isStarting = false
+            }
+        }
+        function maze() {
+            canvas.onmousedown = initiateMaze
+            canvas.onmousemove = KeepMaze
+            canvas.onmouseup = leaveMaze
+            let keepDrawing = false
+            let x, y
+            function initiateMaze(e) {
+                keepDrawing = true
+                context.beginPath()
+                context.moveTo(e.offsetX, e.offsetY)
+                y = e.offsetY
+            }
+            /*two lines, here you gotta close the line and start another one whenver there is a new y coordinate or x coordinate path*/
+            function KeepMaze(e) {
+                if (keepDrawing && e.offsetY < y + 50) {
+                    context.lineTo(e.offsetX, y)
+                    context.stroke()
+                    x = e.offsetX
+                }
+                else if (keepDrawing && e.offsetY > y + 50) {
+                    context.lineTo(x, e.offsetY)
+                    context.strok()
+                    y = e.offsetY
+                }
+            }
+            function leaveMaze() {
+                keepDrawing = false
+            }
+        }
+        function changeColor(x) {
+            colorStyle = x.value
+            effectsColor = x.value
+        }
+        function changeStrokeColor(x) {
+            strokColor = x.value
+        }
+        function hideDia() {
+            let dialog = document.getElementById('Text')
+            dialog.style.display = 'none';
+        }
+        function showText() {
+            var buttonInside
+            let TextFont
+            dialogText = document.getElementById('Text')
+            dialogText.style.display = 'inline-block';
+            let fontFamilies = document.getElementById('fontFamilies')
+            fontFamilies.style.display = 'inline-block'
+            let insideDialog = document.getElementById('textHolder')
+            insideDialog.addEventListener('input', function () {
+                var TextValue = this.value
+                context.font = fontText
+                context.fillText(TextValue, 100, 100)
+                buttonInside = document.getElementsByClassName('font')
+                for (let index = 0; index < buttonInside.length; index++) {
+                    buttonInside[index].textContent = TextValue
+                }
+            })
+        }
+        function WidthGrab() {
+            let width = document.getElementById('widthNum').value
+            document.getElementById('widthSEEN').textContent = width
+        }
+        function HeightGrab() {
+            let height = document.getElementById('heightNum').value
+            document.getElementById('heightSEEN').textContent = height
+        }
+        function changer() {
+            rangeValue = document.getElementById('number').value
+            let displayValue = document.getElementById('userReadCheck')
+            displayValue.textContent = rangeValue;
+        }
+        function detach() {
+            let r = document.getElementById('blend')
+            r.style.display = 'none'
+        }
+        function GreyScale() {
+            let imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+            let dataArray = imageData.data;
+            for (let index = 0; index < dataArray.length; index = index + 4) {
+                dataArray[index] = (dataArray[index] + dataArray[index + 1] + dataArray[index + 2]) / 3;
+                dataArray[index + 1] = (dataArray[index] + dataArray[index + 1] + dataArray[index + 2]) / 3;
+                dataArray[index + 2] = (dataArray[index] + dataArray[index + 1] + dataArray[index + 2]) / 3;
+            }
+            context.putImageData(imageData, 0, 0)
+        }
+        function strok() {
+            context.beginPath()
+            context.arc(300, 200, 100, 0, Math.PI * 2);
+            context.strokeStyle = colorStyle
+            context.stroke()
+            context.closePath()
+            let x = document.getElementById('circle-Size');
+            x.style.display = 'inline-block';
+            let z = document.getElementById('strok');
+            z.style.width = '170px'
+            x.addEventListener('click', function () {
+                let radius = 100;
+                radius += 10;
+                context.beginPath()
+                context.arc(300, 200, radius, 0, Math.PI * 2);
+                context.stroke()
+                context.closePath()
+            })
+        }
+        function draw() {
+            let check = 1
+            canvas.style.cursor = 'crosshair';
+            canvas.onmousedown = startDrawing;
+            canvas.onmouseup = stopDrawing;
+            canvas.onmousemove = draw;
+            let rangeSlide = document.querySelector('.Ranger')
+            rangeSlide.style.opacity = '1'
+            function startDrawing(e) {
+                if (check === 1) {
+                    isDrawing = true;
+                    context.beginPath();
+                    context.moveTo(e.offsetX, e.offsetY);
+                }
+            }
+            function draw(e) {
+                if (isDrawing === true) {
+                    let x = e.offsetX
+                    let y = e.offsetY
+                    context.lineTo(x, y);
+                    context.strokeStyle = colorStyle
+                    context.stroke();
+                    context.lineWidth = rangeValue
+                    let round = document.getElementById('round')
+                    round.addEventListener('click', function () {
+                        context.lineCap = 'round';
+                    })
+                    let square = document.getElementById('square')
+                    square.addEventListener('click', function () {
+                        context.lineCap = 'square';
+                    })
+                }
+            }
+            function stopDrawing() {
+                isDrawing = false;
+            }
+        }
+        function line() {
+            canvas.addEventListener('click', function (e) {
+                context.beginPath()
+                context.moveTo(e.offsetX, e.offsetY)
+            })
+            canvas.onmousedown = toWhere
+            function toWhere(e) {
+                context.lineTo(e.offsetX, e.offsetY)
+                context.stroke()
+            }
+        }
+        function grab(img) {
+            context.drawImage(img, 145, 2, 530, 470)
+            img.crossorigin = "Anonymous";
+        }
+        function clearit() {
+            context.clearRect(0, 0, canvas.width, canvas.height)
+        }
+    </script>
+</body>
+
+</html>

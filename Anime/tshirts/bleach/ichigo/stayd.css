@@ -1,0 +1,271 @@
+
+#modifyOptions>span {
+    background-color: orange;
+    padding: 10px 10px;
+    border: 0ch;
+    border-radius: 10px;
+}
+
+#modifyOptions>span:hover {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    transition: 400ms;
+    cursor: pointer;
+}
+
+.slide-Show-container2 {
+    display: none;
+}
+
+#placeHolder {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: inline-block;
+    margin-left: 2pxpx;
+    margin-top: 160px;
+}
+
+#coloRange {
+    transform: rotate(270deg);
+    float: left;
+    position: relative;
+    left: 2px;
+    top: 250px;
+}
+
+#myCanvas {
+    position: absolute;
+    left: 370px;
+    top: 60px;
+}
+
+.buttons {
+    margin-top: 60px;
+    position: relative;
+}
+
+.buttons>button {
+    background-color: rgb(91, 223, 91);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 330px;
+    height: 60px;
+    border-style: solid;
+    border-width: 00.1px;
+    border-color: rgb(248, 229, 187);
+    font-size: 19px;
+}
+
+.buttons>button:hover {
+    background-color: rgb(247, 174, 38);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.effects>button {
+    background-color: grey;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 120px;
+    height: 30px;
+    border-style: none;
+    cursor: no-drop;
+}
+
+.effects>button:hover {
+    background-color: orange;
+    transition: 0.5s;
+}
+
+.effects {
+    margin-left: 360px;
+    margin-top: 6px;
+}
+
+#remove {
+    background-color: rgb(91, 223, 91);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 100px;
+    height: 30px;
+    border-style: none;
+    margin-top: 70px;
+    margin-left: 877px;
+}
+
+#remove:hover {
+    background-color: red;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.optionChanges {
+    background-color: white;
+    height: 359px;
+    width: 330px;
+    position: absolute;
+    z-index: 7;
+    overflow: scroll;
+    display: none;
+    transition: height 1s;
+}
+
+.addedShapes {
+    background-color: white;
+    width: 330px;
+    position: absolute;
+    z-index: 8;
+    overflow: scroll;
+    display: none;
+    transition: height 1s;
+}
+.displayNow {
+    display: block;
+}
+.addedShapes button {
+    border-radius: 30px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(91, 223, 91);
+    display: block;
+}
+
+.addedShapes button:hover {
+    opacity: 0.5;
+    background-color: rgb(196, 255, 196);
+    transition: 700ms;
+    cursor: pointer;
+}
+
+.optionChanges button {
+    border-radius: 30px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(91, 223, 91);
+    display: block;
+}
+
+.optionChanges button:hover {
+    opacity: 0.5;
+    background-color: rgb(196, 255, 196);
+    transition: 700ms;
+    cursor: pointer;
+}
+
+.show {
+    display: block;
+}
+#close {
+    background-color: orange;
+    color: white;
+    position: fixed;
+    padding: 2px 2px;
+    border-radius: 8px;
+    margin-right: 0px;
+}
+
+#close:hover {
+    cursor: pointer;
+}
+
+.optionButton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.optionButton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.optionButton:hover span {
+    padding-right: 40px;
+}
+
+.optionButton:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+#textHolder {
+    width: 330px;
+    height: 70px;
+    border: 0.5px solid rgb(77, 231, 90);
+    border-radius: 20px;
+    padding-left: 12px;
+    padding-top: 12px;
+}
+
+#fontFamilies {
+    line-height: 3;
+}
+
+#fontFamilies button {
+    background: none;
+    border: 0.2px solid rgb(77, 231, 90);
+    border-radius: 20px;
+    padding: 10px 10px;
+
+}
+
+#fontFamilies button:hover {
+    background-color: rgb(77, 231, 90);
+    cursor: pointer;
+    transition: 400ms;
+}
+
+#dialogText {
+    display: none;
+    top: 65px;
+    border-radius: 20px;
+    border-color: rgb(91, 223, 91);
+    border-width: 0.5px;
+    border-style: solid;
+    width: 400px;
+    z-index: 10;
+}
+
+#dialogText:after {
+    content: " ";
+    position: absolute;
+    right: 175px;
+    top: -13px;
+    border-top: none;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-bottom: 15px solid rgb(91, 223, 91);
+}
+
+#placeHolder {
+    border-radius: 10px;
+    width: 390px;
+    height: 80px;
+    border-style: solid;
+    border-color: orange;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.fonts {
+    background-color: white;
+    border-width: 0.5px;
+    border-radius: 10px;
+    border-color: rgb(91, 223, 91);
+    border-style: solid;
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+}
+
+.fonts:hover {
+    background-color: orange;
+    color: white;
+    transition: 600ms;
+    border-style: none;
+    cursor: pointer;
+}

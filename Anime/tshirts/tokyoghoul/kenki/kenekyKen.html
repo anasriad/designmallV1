@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../../../Landing_Page_designs/ic.png">
+    <link rel="stylesheet" href="../../bleach/ichigo/ichigo.css">
+    <title>Design Mall: Kenki Ken, Tokyou Ghoul</title>
+</head>
+
+<body>
+
+    <body>
+        <header class="top">
+            <h1 id="name"><a href="../../../../designmall.html" target="_self" id="main">Design Mall</a></h1>
+            <form action="action.php" method="get" class="search">
+                <select id="topselect">
+                    <option>Products&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                    <option>T-Shirts</option>
+                    <option>Mugs</option>
+                    <option>Hoodies</option>
+                    <option>Hats</option>
+                </select>
+                <input type="search" placeholder="Search Your Style...">
+                <input type="submit" value="Go!">
+            </form>
+            <a href="#" class="info-comp">About Us</a>
+            <a href="mailto:photographylife56.com" class="contact-comp">Contact Us</a>
+            <nav class="diff">
+                <div class="dropdown">
+                    <button class="dropbtn">Anime&nbsp;&nbsp; &darr;</button>
+                    <div class="dropdown-content">
+                        <a href="../../animetshirts.html">T-shirts</a>
+                        <a href="#">Mugs</a>
+                        <a href="#">Hats</a>
+                        <a href="#">Phone Case</a>
+                    </div>
+                </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="dropdown">
+                    <button class="dropbtn">Movies & Tv-Shows&nbsp;&nbsp; &darr;</button>
+                    <div class="dropdown-content">
+                        <a href="../../../../movies/tshirts/movies.html">T-shirts</a>
+                        <a href="#">Mugs</a>
+                        <a href="#">Hats</a>
+                        <a href="#">Phone Case</a>
+                    </div>
+                </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="dropdown">
+                    <button class="dropbtn">Cartoon&nbsp;&nbsp; &darr;</button>
+                    <div class="dropdown-content">
+                        <a href="../../../../cartoon/cartoon.html">T-shirts</a>
+                        <a href="#">Mugs</a>
+                        <a href="#">Hats</a>
+                        <a href="#">Phone Case</a>
+                    </div>
+                </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="dropdown">
+                    <button class="dropbtn">Quotes&nbsp;&nbsp; &darr;</button>
+                    <div class="dropdown-content">
+                        <a href="../../../../quotes/quotes.html">T-shirts</a>
+                        <a href="#">Mugs</a>
+                        <a href="#">Hats</a>
+                        <a href="#">Phone Case</a>
+                    </div>
+                </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                <div class="dropdown">
+                    <button class="dropbtn">Music&nbsp;&nbsp; &darr;</button>
+                    <div class="dropdown-content">
+                        <a href="../../../../music/music.html">T-shirts</a>
+                        <a href="#">Mugs</a>
+                        <a href="#">Hats</a>
+                        <a href="#">Phone Case</a>
+                    </div>
+                </div>&nbsp;&nbsp;&nbsp;
+                <div class="dropdown">
+                    <button class="dropbtn">Sports Designs&nbsp;&nbsp; &darr;</button>
+                    <div class="dropdown-content">
+                        <a href="../../../../sports/sports.html">T-shirts</a>
+                        <a href="websites/static.html">Mugs</a>
+                        <a href="websites/dynamics.html">Phone Case</a>
+                    </div>
+                </div>&nbsp;&nbsp;&nbsp;
+                <div class="dropdown">
+                    <button class="dropbtn">Print&nbsp;&nbsp; &darr;</button>
+                    <div class="dropdown-content">
+                        <a href="print/print.html">T-shirts</a>
+                        <a href="#">Mugs</a>
+                        <a href="#">Hats</a>
+                        <a href="#">Phone Case</a>
+                    </div>
+                </div>&nbsp;&nbsp;&nbsp;
+                <div class="dropdown">
+                    <button class="dropbtn">Book Covers&nbsp;&nbsp; &darr;</button>
+                    <div class="dropdown-content">
+                        <a href="bookcovers/bookcover.html">Full Cover</a>
+                        <a href="#">3D Mockups</a>
+                        <a href="#">Front-Cover</a>
+            </nav>
+        </header>
+        <dialog id="modifyOptions">
+            <span onclick="leave()">&times;</span><br>
+            <div class="inner-content">
+                <input type="range" min="0" max="255" id="coloRange" value="0">
+                <canvas id="myCanvas"></canvas><br>
+                <div style="display: inline-block; margin-top: 480px;" id="buttons">
+                    <button>Convert to GreyScale</button>
+                    <button class="manga">Turn to Manga</button>
+                    <button>Translate Text</button>
+                    <button>Remove Text</button><br><br>
+                    <button>Modify Text</button>
+                    <button>Add Circle Background</button>
+                    <button>Add Square Background</button>
+                    <button>Save</button>
+                    <button id="removeFrame">Remove Frame</button>
+                </div>
+                <div style="float: right; border: 0.5px solid orange; padding: 20px 20px; border-radius: 20px;"
+                    class="slide-Show-container">
+                    <div class="options">
+                        <img src="modify/4.png" width="360px" height="280px" style="margin-top: 20px;"
+                            onclick="displayAnother(this)" id="mainOne"><br>
+                        <img src="modify/3.png" width="360px" height="280px" onclick="displayAnother(this)"><br>
+                        <img src="modify/2.png" width="360px" height="280px" onclick="displayAnother(this)"><br>
+                        <img src="modify/1.png" width="360px" height="280px" onclick="displayAnother(this)"><br>
+                        <img src="modify/5.png" width="360px" height="280px" onclick="displayAnother(this)">
+                    </div>
+                </div>
+                <div style="float: right; border: 0.5px solid orange; padding: 20px 20px; border-radius: 20px;"
+                    class="slide-Show-container2">
+                    <div class="options">
+                        <img src="modify/frameless/1.png" width="360px" height="280px" style="margin-top: 20px;"
+                            onclick="displayAnother(this)" id="mainOne"><br>
+                        <img src="modify/frameless/2.png" width="360px" height="280px"
+                            onclick="displayAnother(this)"><br>
+                        <img src="modify/frameless/3.png" width="360px" height="280px"
+                            onclick="displayAnother(this)"><br>
+                        <img src="modify/frameless/4.png" width="360px" height="280px"
+                            onclick="displayAnother(this)"><br>
+                        <img src="modify/frameless/5.png" width="360px" height="280px" onclick="displayAnother(this)">
+                    </div>
+                </div>
+            </div>
+        </dialog>
+        <div style=" margin-left: 30px;">
+            <div class="container" style="margin-top: 180px; display: inline-block;">
+                <img src="firstone.png" width="470px" height="340px" style="position:absolute; z-index: 2;"
+                    id="imageofprod" onmouseover="zoomIn(this)" onmouseout="zoomOut(this)">
+                <img id="expandedImg" width="500px" height="340px"
+                    style="position: absolute; z-index: 1; border-width: 1px; border-style: solid; background-color: white;"
+                    onmouseover="zoomIn(this)" onmouseout="zoomOut(this)" onclick="fullshow(this)">
+            </div>
+            <div class="row" style="display: inline-block; margin-top: 550px;">
+                <div class="column">
+                    <img src="firstone.png" width="200px" height="140px" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="partial.jpg" width="200px" height="140px" onclick="myFunction(this);">
+                </div>
+                <div class="column">
+                    <img src="wholebleach.png" width="200px" height="140px" onclick="myFunction(this);">
+                </div>
+            </div>
+            <aside
+                style="border-width: 1px; border-style: solid; border-bottom: 0ch; border-radius: 30px; color: rgb(121, 121, 121); float: right; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; position: relative; top: 140px; padding-left: 50px; padding-right: 50px; padding-top: 20px; margin-right: 60px;">
+                <h3 style="text-align: center;">Ichigo from
+                    Bleach:<br> The Rules in This House Are Just too Strict</h3>
+                <h4 style="color: rgb(136, 122, 98);" id="price">69dh<sup
+                        style="color: rgb(201, 134, 134);"><del>89dh</del></sup></h4>
+                <form action="#">
+                    <h4 id="text" onclick="belowit()">Choose How Many Pieces You Want?&nbsp; &darr;</h4>
+                    <input type="text" width="30px" style="display: none;" id="data-Entry"
+                        placeholder="Enter a number"><br><br>
+                    <div style="text-align: center;">
+                        <input type="checkbox" value="L" name="sizeL">
+                        <label for="sizeL">L</label>&nbsp;&nbsp;&nbsp;
+                        <input type="checkbox" value="S" name="sizeS">
+                        <label for="sizeS">S</label>&nbsp;&nbsp;&nbsp;
+                        <input type="checkbox" value="M" name="sizeM">
+                        <label for="sizeM">M</label>&nbsp;&nbsp;&nbsp;
+                        <input type="checkbox" value="XL" name="sizeXL">
+                        <label for="sizeXL">XL</label>&nbsp;&nbsp;&nbsp;
+                        <input type="checkbox" value="XXL" name="sizeXXL">
+                        <label for="sizeXXL">XXL</label><br>
+                        <input type="checkbox" value="hommes" name="male">
+                        <label for="male">Hommes</label>
+                        <input type="checkbox" value="femmes" name="female">
+                        <label for="male">femmes</label>
+                    </div>
+                </form>
+                <hr>
+                <button class="update" onclick="showOptions()">Modify Design</button>
+
+                <button class="update">Choose Shirt Color</button>
+                <button class="update">Body-Check</button><br><br>
+                <input type="button" class="buybtn" value="Buy">
+                <hr>
+                <h4 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+                    Category:&nbsp;<a style="color: rgb(121, 121, 121);" href="../../animetshirts.html"
+                        target="_blank">Anime</a></h4>
+                <h4 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Pieces STILL
+                    Available:&nbsp;<mark style="background-color: white; color: orange;">5</mark></h4>
+                <h4 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Payment
+                    Method:&nbsp;Cash on Delievry</h4>
+                <h4 style="color: red;">FREE DELIEVERY</h4>
+            </aside>
+        </div>
+        <div style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; margin-left: 50px;">
+            <h4 style="color: rgb(121, 121, 121);">Description:</h4>
+            <p style="color: rgb(63, 63, 63);">The t-shirt is 100% cotton, available in black and white, however, you
+                can choose your own color by clicking in the button above(choose shirt color). In addition, this guy is
+                available in the following sizes (L/M/S/XL/XXL). Only 5 pieces available in stock. The price is 49dh
+                after a promotion of 20% in the occasion of summer. The promotion is near to an end.</p>
+            <p style="color: rgb(63, 63, 63);">The design is about the main character in animation series Bleach, under
+                the name of Ichigo Kurosaki.The quote under the main design says "The rules in this house are just too
+                strict", which is a quote said by Ichigo in the series. <mark
+                    style="background-color: white; color: red;">You can change the design completely, change part of
+                    it, resize it... Just dice it and slice it the way you would like :)</mark></p>
+            <p style="color: rgb(63, 63, 63);">Design Mall CURRENTLY offers free delievery all over Morocco.</p>
+            <p>It is strictly <mark style="color: red; background-color: white;">PROHIBITED</mark> to download this
+                design from the galery above. In order to download design please click <mark
+                    style="background-color: white;"><a style="color: rgb(33, 153, 33); text-decoration: none;"
+                        href="#">Here</a></mark></p>
+        </div><br><br>
+        <div class="flex-container">
+            <h4
+                style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-align: center;">
+                Similar Content</h4>
+            <a href="#" style="text-decoration: none; color: black;" class="anishirt"><img
+                    src="../../onepuncheman/saitama.png" width="323px">
+                <a href="#" style="text-decoration: none; color: black;" class="anishirt"><img src="../../L.png"
+                        width="323px">
+                    <a href="#" style="text-decoration: none; color: black;" class="anishirt"><img
+                            src="../../village.png" width="323px">
+                        <a href="#" style="text-decoration: none; color: black;" class="anishirt"><img
+                                src="../../gear5.png" width="323px">
+        </div><br><br>
+        <div style="text-align: center;">
+            <div class="creation">
+                <a href="#" id="galery"><img src="../../../../Landing_Page_designs/create.jpg" height="200px"
+                        width="280px"></a>
+                <h4
+                    style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-align: center;">
+                    Create Your Own<br>Design ONLINE & Print it<br> On Your Item</h4>
+            </div>
+            <div class="buy-sell" style="display: inline-block;">
+                <a href="#" id="galery" style="margin-left: 10px;"><img src="../../../../Landing_Page_designs/buy.jpg"
+                        height="200px" width="310px"></a>
+                <h4
+                    style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-align: center;">
+                    Buy Assets with Our Designs<br>OR<br>Buy ONLY Our Designs</h4>
+            </div>
+            <div class="upload" style="display: inline-block;">
+                <a href="#" id="galery" style="margin-left: 10px;"><img
+                        src="../../../../Landing_Page_designs/upload.jpg" height="200px" width="310px"></a>
+                <h4
+                    style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-align: center;">
+                    Upload Your Own Designs<br>
+                    To be Printed</h4>
+            </div>
+            <div class="design" style="display: inline-block;">
+                <a href="#" id="galery" style="margin-left: 10px;"><img
+                        src="../../../../Landing_Page_designs/design.jpg" height="200px" width="310px"></a>
+                <h4
+                    style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; text-align: center;">
+                    Design Your Assets<br>From Scratch</h4>
+            </div>
+        </div>
+
+        <footer style="text-align: center; background-color: rgb(242, 252, 251); line-height: 4; margin-top: 180px;">
+            <ul style="display: inline-block; list-style: none;">
+                <li><a style="text-decoration: none; color: black;" href="#">Become Our Delivery Guy</a></li>
+                <li><a style="text-decoration: none; color: black;" href="#">Become Our Graphic Designer</a></li>
+                <li><a style="text-decoration: none; color: black;" href="#">Become Our Partner</a></li>
+                <li><select
+                        style="border-width: 0px; width: 80px; height: 30px; border-radius: 10px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; background-color: orange; color: white;">
+                        <option id="anglais">English</option>
+                        <option id="français">French</option>
+                        <option id="espagnole">Spanish</option>
+                        <option id="arabe">العربية</option>
+                    </select></li>
+            </ul>
+            <ul style="display: inline-block; list-style: none;">
+                <li><a style="text-decoration: none; color: black;" href="#">Search Trends</a></li>
+                <li><a style="text-decoration: none; color: black;" href="#">Most Bought Assets</a></li>
+                <li><a style="text-decoration: none; color: black;" href="#">Support</a></li>
+                <li><a style="text-decoration: none; color: black;" href="#">Contact Us</a></li>
+                <li><a style="text-decoration: none; color: black;" href="#">FAQ</a></li>
+            </ul>
+        </footer>
+        <script>
+            const canvas = document.getElementById('myCanvas')
+            const ctx = canvas.getContext('2d')
+            canvas.height = 450
+            canvas.width = 550
+            var img
+            img = document.getElementById('mainOne')
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height)
+            function belowit() {
+                let x = document.getElementById('data-Entry');
+                x.style.display = 'block';
+            }
+            function myFunction(imgs) {
+                var first = document.getElementById("imageofprod");
+                first.style.visibility = 'hidden';
+                var expandImg = document.getElementById("expandedImg");
+                expandImg.src = imgs.src;
+            }
+            function zoomIn(x) {
+                x.style.height = "500px";
+                x.style.width = "720px";
+                x.style.transition = "700ms";
+            }
+            function zoomOut(x) {
+                x.style.height = "340px";
+                x.style.width = "400px";
+            }
+            function fullshow(x) {
+                x.style.height = "720px";
+                x.style.width = "1060px";
+                x.style.transition = "700ms";
+            }
+            function showOptions() {
+                let dial = document.getElementById('modifyOptions')
+                dial.style.display = 'block'
+            }
+            function displayAnother(img) {
+                ctx.clearRect(0, 0, canvas.width, canvas.height)
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height)
+            }
+            function leave() {
+                let dial = document.getElementById('modifyOptions')
+                dial.style.display = 'none'
+            }
+            let DoIt = false
+            var button = document.getElementById('removeFrame')
+            button.addEventListener('click', function () {
+                let firstDiv = document.querySelector('.slide-Show-container')
+                let secondDiv = document.querySelector('.slide-Show-container2')
+                firstDiv.style.display = 'none'
+                secondDiv.style.display = 'inline-block'
+                button.style.display = 'none'
+                let divison = document.getElementById('buttons')
+                let newButton = document.createElement('button')
+                newButton.textContent = "Return Frame"
+                divison.append(newButton)
+                cickAgain(newButton, button, firstDiv, secondDiv)
+                DoIt = true
+            })
+            function cickAgain(x, y, z, f) {
+                x.addEventListener('click', function () {
+                    if (DoIt === true) {
+                        x.style.display = 'none'
+                        y.style.display = 'inline-block'
+                        z.style.display = 'inline-block'
+                        f.style.display = 'none'
+                    }
+                })
+            }
+            let valuRange = document.getElementById('coloRange')
+        </script>
+    </body>
+
+</html>

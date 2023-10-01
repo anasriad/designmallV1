@@ -1,0 +1,474 @@
+#name {
+    display: block;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#main {
+    text-decoration: none;
+    color: rgb(77, 231, 90);
+
+}
+
+#main:hover {
+    color: orange;
+    transition: 400ms;
+}
+
+#myCanvas {
+    border: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 260px;
+    position: absolute;
+}
+
+.mod {
+    background-color: rgb(77, 231, 90);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    width: 240px;
+    height: 50px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.mod:hover {
+    background-color: rgb(28, 71, 23);
+    cursor: pointer;
+}
+
+.mod:focus {
+    background-color: rgb(159, 173, 33);
+}
+
+#checking {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(77, 231, 90);
+    color: white;
+    border-radius: 10px;
+    padding: 10px 60px;
+    border: 0ch;
+}
+
+#checking:hover {
+    background-color: orange;
+    cursor: pointer;
+}
+
+#close {
+    background-color: rgb(77, 192, 77);
+    border: 0ch;
+    border-radius: 50%;
+    padding: 10px 10px;
+    color: white;
+    float: right;
+}
+
+#close:hover {
+    background-color: orange;
+}
+
+.modi {
+    background-color: rgb(39, 112, 45);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    width: 240px;
+    height: 50px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.modi:hover {
+    background-color: rgb(34, 80, 38);
+    cursor: pointer;
+}
+
+.hyper:hover {
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 400ms;
+}
+
+.modil {
+    background-color: rgb(112, 85, 35);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    width: 240px;
+    height: 50px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.modil:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+#circle-Size {
+    background-color: rgb(77, 231, 90);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    width: 70px;
+    height: 50px;
+    border-width: 1px;
+    border-style: solid;
+    display: none;
+}
+
+#circle-Size:hover {
+    background-color: rgb(28, 71, 23);
+    cursor: pointer;
+}
+
+.circ {
+    background-color: rgb(77, 231, 90);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    width: 240px;
+    height: 50px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.circ:hover {
+    background-color: rgb(28, 71, 23);
+    cursor: pointer;
+}
+
+#circle-Drag {
+    background-color: rgb(77, 231, 90);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    width: 70px;
+    height: 50px;
+    border-width: 1px;
+    border-style: solid;
+    display: none;
+}
+
+#circle-Drag:hover {
+    background-color: rgb(28, 71, 23);
+    cursor: pointer;
+}
+
+#StopDraw {
+    background-color: rgb(77, 231, 90);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    width: 60px;
+    height: 50px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+#StopDraw:hover {
+    background-color: rgb(28, 71, 23);
+    cursor: pointer;
+}
+
+.model {
+    background-color: rgb(77, 231, 90);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: larger;
+    width: 70px;
+    height: 50px;
+    border-width: 1px;
+    border-style: solid;
+    display: none;
+}
+
+.model:hover {
+    background-color: rgb(28, 71, 23);
+    cursor: pointer;
+}
+
+#number {
+    opacity: 0.8;
+}
+
+#number:hover {
+    opacity: 1;
+    transition: 200ms;
+}
+
+#plus {
+    background-color: orange;
+    border-radius: 30%;
+    border: 0ch;
+    color: white;
+    padding: 4px 8px;
+}
+
+#plus:hover {
+    cursor: pointer;
+    background-color: rgb(77, 192, 77);
+}
+
+.Ranger {
+    display: block;
+    text-align: center;
+    opacity: 1;
+}
+
+#round {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: solid 1px orange;
+    border-radius: 30px;
+    background-color: white;
+    padding: 10px 10px;
+}
+
+#round:hover {
+    background-color: rgb(77, 192, 77);
+    color: white;
+    border: 0ch;
+    transition: 300ms;
+}
+
+#square {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: solid 1px orange;
+    background-color: white;
+    padding: 10px 10px;
+}
+
+#square:hover {
+    background-color: rgb(77, 192, 77);
+    color: white;
+    border: 0ch;
+    transition: 300ms;
+}
+
+#textHolder {
+    width: 330px;
+    height: 70px;
+    border: 0.5px solid rgb(77, 231, 90);
+    border-radius: 20px;
+    padding-left: 12px;
+    padding-top: 12px;
+}
+
+#fontFamilies {
+    line-height: 3;
+}
+
+#fontFamilies button {
+    background: none;
+    border: 0.2px solid rgb(77, 231, 90);
+    border-radius: 20px;
+    padding: 10px 10px;
+
+}
+
+#fontFamilies button:hover {
+    background-color: rgb(77, 231, 90);
+    cursor: pointer;
+    transition: 400ms;
+}
+
+#Text {
+    line-height: 2;
+}
+
+#Text::after {
+    content: " ";
+    position: absolute;
+    right: 30px;
+    top: -15px;
+    border-top: none;
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-bottom: 15px solid black;
+}
+
+#Text>span {
+    background-color: orange;
+    color: white;
+    border-radius: 20%;
+    padding: 1px 5px;
+    margin-top: 0px;
+    margin-right: 1px;
+}
+
+#Text>span:hover {
+    cursor: pointer;
+    background-color: rgb(165, 165, 165);
+    transition: 400ms;
+}
+
+#TextHolder:focus {
+    border-color: orange;
+}
+
+#widthBubble {
+    margin-top: 480px;
+    margin-left: 10px;
+}
+
+.bottomButtonStroke {
+    background-color: rgb(77, 231, 90);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px 10px;
+    border: 0ch;
+    border-radius: 20px;
+    display: none;
+}
+
+.bottomButtonStroke:hover {
+    background-color: rgb(146, 108, 37);
+    cursor: pointer;
+}
+
+.bottomButtonStroke:focus {
+    background-color: rgb(159, 173, 33);
+}
+
+.bottomButton {
+    background-color: rgb(77, 231, 90);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px 10px;
+    border: 0ch;
+    border-radius: 20px;
+}
+
+.bottomButton:hover {
+    background-color: rgb(146, 108, 37);
+    cursor: pointer;
+}
+
+.bottomButton:focus {
+    background-color: rgb(159, 173, 33);
+}
+
+.slide-container {
+    border: 00.5px rgb(77, 231, 90) solid;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.slide-container img {
+    width: 150px;
+    height: 100px;
+}
+
+.slide-container img:hover {
+    opacity: 0.6;
+    cursor: pointer;
+    transition: 400ms;
+}
+
+.inner-content {
+    display: inline-block;
+}
+
+.blendModes {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border: 0.5 rgb(77, 231, 90) solid;
+    border-radius: 10px;
+    position: absolute;
+    display: none;
+}
+
+.blendModes>h5:hover {
+    color: orange;
+    transition: 400ms;
+}
+
+#times {
+    border: 0ch;
+    background-color: orange;
+    border-radius: 5px;
+    padding: 5px 5px;
+    margin-top: 1px;
+    margin-left: 1px;
+}
+
+#times:hover {
+    background-color: rgb(77, 192, 77);
+    transition: 400ms;
+    cursor: pointer;
+}
+
+#blendModes {
+    width: 100px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+
+.adjacentLines-Options {
+    background-color: rgb(77, 231, 90);
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px 10px;
+    border: 0ch;
+    border-radius: 20px;
+}
+
+.adjacentLines-Options:hover {
+    background-color: orange;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px 10px;
+    border: 0ch;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.lengthofline {
+    display: inline-block;
+}
+
+#leftArrow {
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    padding: 20px 10px;
+    border: 0ch;
+    position: absolute;
+    left: 10px;
+    top: 110px;
+    z-index: 5;
+    display: none;
+}
+
+#leftArrow:hover {
+    background-color: rgb(77, 231, 90);
+    color: black;
+    transition: 400ms;
+    cursor: pointer;
+}
+
+#rightArrow {
+    background-color: orange;
+    color: white;
+    border-radius: 10px;
+    padding: 20px 10px;
+    border: 0ch;
+    position: absolute;
+    right: 10px;
+    top: 110px;
+    z-index: 5;
+}
+
+#rightArrow:hover {
+    background-color: rgb(77, 231, 90);
+    color: black;
+    transition: 400ms;
+    cursor: pointer;
+}
+
+#rec {
+    display: none;
+}

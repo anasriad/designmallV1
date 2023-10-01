@@ -1,0 +1,196 @@
+let displayImage = document.getElementById('mockup')
+            let design = document.getElementById('dsnMockup')
+            let originials = {
+                imgSource: `${displayImage.src}`,
+                imgWidth: `${displayImage.style.width}`,
+                imgHeight: `${displayImage.style.height}`,
+                designWidth: `${design.style.width}`,
+                desingHeight: `${design.style.height}`,
+                desingTop: `${design.style.top}`,
+                imgLeft: `${displayImage.style.left}`,
+                imgRight: `${displayImage.style.right}`,
+            }
+            let forClarity = false;
+            const canvas = document.getElementById("myCanvas")
+            const context = canvas.getContext('2d')
+            canvas.height = 470
+            canvas.width = 758
+            context.beginPath()
+            context.moveTo(379, 0)
+            context.lineTo(379, 470)
+            context.strokeStyle = 'rgb(91, 223, 91)'
+            context.stroke()
+            let dialog = document.getElementById("dialogBox")
+            let go = document.getElementById("goButn")
+            let buttonArray
+            let imgOfShirt
+            let dropdowns
+            let designData
+            go.addEventListener("click", function () {
+                dialog.style.display = "block";
+            })
+            function myFunction(imgs) {
+                var first = document.getElementById("imageofprod");
+                first.style.visibility = 'hidden';
+                var expandImg = document.getElementById("expandedImg");
+                expandImg.src = imgs.src;
+            }
+            function zoomIn(x) {
+                x.style.height = "500px";
+                x.style.width = "720px";
+                x.style.transition = "700ms";
+            }
+            function zoomOut(x) {
+                x.style.height = "340px";
+                x.style.width = "400px";
+            }
+            function fullshow(x) {
+                x.style.height = "720px";
+                x.style.width = "1060px";
+                x.style.transition = "700ms";
+            }
+            function tshirtType(elem) {
+                document.getElementById("typeOptions").classList.toggle("show")
+            }
+            let nonClickable = document.getElementById('typeOptions');
+            let click = true;
+            dialog.onclick = function (event) {
+                nonClickable.addEventListener('click', function (e) {
+                    e.bubbles = 'false'
+                    click = false;
+                })
+                if (click == true) {
+                    if (!event.target.matches('.optionButton')) {
+                        dropdowns = document.getElementsByClassName("optionChanges");
+                        var i;
+                        for (i = 0; i < dropdowns.length; i++) {
+                            var openDropdown = dropdowns[i];
+                            if (openDropdown.classList.contains('show')) {
+                                openDropdown.classList.remove('show');
+                            }
+                        }
+                    }
+                }
+            }
+            function grab(img) {
+                let imgID = img.getAttribute('id')
+                if (imgID == 'polo') {
+                    context.clearRect(0, 0, canvas.width / 2, canvas.height)
+                    context.drawImage(img, 22.2955145, 8, 330, 440)
+                    displayImage.src = img.src
+                    displayImage.style.width = '330px'
+                    displayImage.style.height = '440px'
+                    displayImage.style.left = '770px'
+                    displayImage.style.top = '70px'
+                    design.style.top = '270px'
+                    design.style.height = '160px'
+                    design.style.width = '140px'
+                }
+                else {
+                    context.clearRect(0, 0, canvas.width / 2, canvas.height)
+                    context.drawImage(img, 13, 50, 400, 360)
+                    displayImage.src = originials.imgSource
+                    displayImage.style.width = originials.imgWidth
+                    displayImage.style.height = originials.imgHeight
+                    displayImage.style.left = originials.imgLeft
+                    displayImage.style.top = originials.imgTop
+                    design.style.top = originials.desingTop
+                    design.style.height = originials.desingHeight
+                    design.style.width = originials.designWidth
+                }
+            }
+            function designChange(element) {
+                let effects = document.getElementsByClassName('designModifer')
+                for (let i = 0; i < effects.length; i++) {
+                    effects[i].style.backgroundColor = 'rgb(91, 223, 91)'
+                    effects[i].style.cursor = 'pointer'
+                }
+                context.clearRect(0, 0, canvas.width / 2, canvas.height)
+                context.drawImage(design, 25, 45, 330, 380);
+                forClarity = true
+            }
+            function removal() {
+                if (forClarity === false) {
+                    alert("Click on Modify Button for better experience")
+                }
+            }
+            function newShape() {
+                context.clearRect(0, 0, canvas.width / 2, canvas.height)
+                document.getElementById("shapes").classList.toggle("displayNow")
+            }
+            function shape(toBeOn) {
+                let shapeType = toBeOn.getAttribute('id')
+                if (shapeType === 'circle') {
+                    context.beginPath()
+                    context.arc(200, 170, 150, 0, Math.PI * 2)
+                    context.fill()
+                    context.closePath();
+                }
+            }
+            function addText() {
+                if (forClarity) {
+                    let text = document.getElementById('dialogText')
+                    text.style.display = 'block'
+                }
+                else {
+                    alert('click on Modify Tshirt Button!')
+                }
+            }
+            let textWriting = document.getElementById('placeHolder');
+            let TheButton = document.querySelector('.fonts');
+            textWriting.addEventListener('input', function () {
+                let buttonsInside = document.getElementsByClassName('fonts')
+                for (let i = 0; i < buttonsInside.length; i++) {
+                    buttonsInside[i].textContent = this.value;
+                }
+            })
+            function Drawing() {
+                let isStarting = false
+                canvas.onmousedown = startDrawing
+                canvas.onmousemove = keepDrawing
+                canvas.onmouseup = stopDrawing
+                function startDrawing(e) {
+                    isStarting = true;
+                    context.beginPath()
+                    context.moveTo(e.offsetX, e.offsetY)
+                }
+                function keepDrawing(e) {
+                    if (isStarting) {
+                        context.lineTo(e.offsetX, e.offsetY)
+                        context.strokeStyle = 'black'
+                        context.stroke()
+                    }
+                }
+                function stopDrawing() {
+                    isStarting = false
+                }
+            }
+        /*second attempt*/ 
+        if (elem.value==1) {
+            let pink = document.getElementById('pink')
+            ctx.clearRect(0, 0, canvas.width, canvas.height)
+            ctx.drawImage(pink, -106, 30, pink.width, pink.height)
+            mock.clearRect(0, 0, canvas.width, canvas.height)
+            mock.drawImage(pink, -125, 30, pink.width, pink.height)
+        }
+        else if (elem.value==2) {
+            let green = document.getElementById('green')
+            ctx.clearRect(0, 0, canvas.width, canvas.height)
+            ctx.drawImage(green, -106, 30, green.width, green.height)
+            mock.clearRect(0, 0, canvas.width, canvas.height)
+            mock.drawImage(green, -125, 30, green.width, green.height)
+        }
+        else if (elem.value==3) {
+            let orange = document.getElementById('orange')
+            ctx.clearRect(0, 0, canvas.width, canvas.height)
+            ctx.drawImage(orange, -106, 30, orange.width, orange.height)
+            mock.clearRect(0, 0, canvas.width, canvas.height)
+            mock.drawImage(orange, -125, 30, orange.width, orange.height)
+        }
+        else if (elem.value==4) {
+            let blue = document.getElementById('blue')
+            ctx.clearRect(0, 0, canvas.width, canvas.height)
+            ctx.drawImage(blue, -106, 30, blue.width, blue.height)
+            mock.clearRect(0, 0, canvas.width, canvas.height)
+            mock.drawImage(blue, -125, 30, blue.width, blue.height)
+        }
